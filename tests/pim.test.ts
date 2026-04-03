@@ -49,5 +49,4 @@ const filePath = path.join(process.cwd(), 'Test-Data', 'image1.png');
 await fileChooser.setFiles(path.join(filePath));
 console.log(filePath)
 await page.waitForTimeout(8000);
-
 });
