@@ -1,5 +1,5 @@
 // utils/dataGenerator.ts
-
+import employeeData from '../Test-Data/employee.json';
 /**
  * Generates a random string of given length.
  * @param length - length of the string (default 10)
@@ -12,8 +12,8 @@ export function generateString(length = 10): string {
  * Generates a random username with prefix.
  * @param prefix - optional prefix (default 'user')
  */
-export function generateUsername(prefix = 'user'): string {
-  return `${prefix}_${generateString(6)}`;
+export function generateUsername(){
+  return `${employeeData.username}_${generateString(6)}`;
 }
 
 /**

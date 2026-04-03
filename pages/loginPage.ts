@@ -1,4 +1,5 @@
 import { Page, Locator, expect } from '@playwright/test';
+import { config } from '../utils/configHelper';
 
 export class LoginPage {
   readonly page: Page;
@@ -15,8 +16,7 @@ export class LoginPage {
   }
 
   async goto() {
-    await this.page.goto(
-      'https://opensource-demo.orangehrmlive.com');
+    await this.page.goto(config.baseURL);
     await this.page.waitForLoadState('domcontentloaded');
     await expect(this.page).toHaveTitle('OrangeHRM');
   }
